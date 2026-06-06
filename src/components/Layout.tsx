@@ -20,6 +20,20 @@ function ScrollToTop() {
   return null;
 }
 
+/* Report SPA route changes to Google Analytics (gtag is loaded in index.html). */
+function GoogleAnalytics() {
+  const { pathname, search } = useLocation();
+  useEffect(() => {
+    const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+    gtag?.("event", "page_view", {
+      page_path: pathname + search,
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }, [pathname, search]);
+  return null;
+}
+
 export default function Layout() {
   const { pathname } = useLocation();
   const ref = useRef<HTMLDivElement>(null);
@@ -33,6 +47,7 @@ export default function Layout() {
   return (
     <div className="relative min-h-screen bg-canvas text-soft">
       <Analytics />
+      <GoogleAnalytics />
       <ScrollToTop />
       <Header />
       <div ref={ref} className="page-enter">
