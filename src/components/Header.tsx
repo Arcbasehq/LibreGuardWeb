@@ -52,8 +52,6 @@ export default function Header() {
   const ref = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  if (user) console.log("[avatar debug] user_metadata:", user.user_metadata);
-
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
