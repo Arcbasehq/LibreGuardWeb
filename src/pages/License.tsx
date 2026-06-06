@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 import Button from "../components/Button";
 
@@ -13,6 +14,11 @@ const freedoms: { title: string; desc: string }[] = [
 export default function License() {
   return (
     <>
+      <SEO
+        title="License"
+        description="LibreGuard is released under the GNU General Public License v3.0. Free to use, study, share, and improve — copyleft for everyone downstream."
+        path="/license"
+      />
       <PageHero
         kicker="License"
         title={

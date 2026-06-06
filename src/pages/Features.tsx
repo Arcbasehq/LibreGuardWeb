@@ -13,6 +13,7 @@ import {
   faSliders,
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 import Button from "../components/Button";
 
@@ -89,6 +90,11 @@ const groups: {
 export default function Features() {
   return (
     <>
+      <SEO
+        title="Features"
+        description="Everything LibreGuard blocks: display and video ads, trackers, beacons, malicious domains, phishing sites, and unwanted scripts — all with zero telemetry and a featherweight footprint."
+        path="/features"
+      />
       <PageHero
         kicker="Features"
         title={

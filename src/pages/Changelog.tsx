@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 
 type Tag = "Added" | "Fixed" | "Changed" | "Security";
@@ -31,6 +32,11 @@ const releases: {
 export default function Changelog() {
   return (
     <>
+      <SEO
+        title="Changelog"
+        description="Release history for LibreGuard. Every version tracked in the open — features, fixes, and changes documented with each release."
+        path="/changelog"
+      />
       <PageHero
         kicker="Changelog"
         title={

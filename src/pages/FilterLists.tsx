@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 
 const lists: {
@@ -18,6 +19,11 @@ const lists: {
 export default function FilterLists() {
   return (
     <>
+      <SEO
+        title="Filter lists"
+        description="Browse and subscribe to LibreGuard filter lists: ads, trackers, malware, annoyances, social widgets, and regional rules. Curated and updated daily."
+        path="/filter-lists"
+      />
       <PageHero
         kicker="Filter lists"
         title={

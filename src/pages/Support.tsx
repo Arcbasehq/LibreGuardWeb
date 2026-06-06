@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 
 const channels: {
@@ -62,6 +63,11 @@ const faqs: { q: string; a: string }[] = [
 export default function Support() {
   return (
     <>
+      <SEO
+        title="Support"
+        description="LibreGuard help and support. Browse documentation, ask the community, report bugs, or find answers to frequently asked questions."
+        path="/support"
+      />
       <PageHero
         kicker="Support"
         title={

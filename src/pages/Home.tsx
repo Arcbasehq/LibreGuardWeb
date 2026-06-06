@@ -17,6 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import Button from "../components/Button";
+import SEO from "../components/SEO";
 
 const platforms = ["Chrome", "Firefox", "Edge", "Brave"] as const;
 type Platform = (typeof platforms)[number];
@@ -73,6 +74,12 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        title="Privacy-first ad blocker"
+        description="LibreGuard blocks ads, trackers, and malware at the network level across 330K+ domains. No telemetry, no account, no data ever leaves your device. Free and open source."
+        path="/"
+        ogType="website"
+      />
       {/* ── Hero ────────────────────────────────────────────── */}
       <section className="mx-auto max-w-6xl px-6 pt-20 pb-24 sm:px-8 lg:pt-28">
         <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">

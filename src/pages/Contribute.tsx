@@ -8,6 +8,7 @@ import {
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 import Button from "../components/Button";
 
@@ -29,6 +30,11 @@ const steps: string[] = [
 export default function Contribute() {
   return (
     <>
+      <SEO
+        title="Contribute"
+        description="Contribute to LibreGuard — an open source ad blocker. Write code, curate filter rules, translate, report bugs, or improve documentation. Every contribution counts."
+        path="/contribute"
+      />
       <PageHero
         kicker="Contribute"
         title={

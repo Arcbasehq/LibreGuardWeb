@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 
 const systems: { name: string; state: "Operational" | "Degraded" }[] = [
@@ -12,6 +13,11 @@ export default function Status() {
 
   return (
     <>
+      <SEO
+        title="System status"
+        description="Real-time service health for LibreGuard. Check the status of filter list CDN, update service, website, and download mirrors."
+        path="/status"
+      />
       <PageHero
         kicker="Status"
         title={

@@ -10,6 +10,7 @@ import {
   faShieldHalved,
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 
 const sections: {
@@ -59,6 +60,11 @@ const sections: {
 export default function Docs() {
   return (
     <>
+      <SEO
+        title="Documentation"
+        description="Complete LibreGuard documentation: installation guides, configuration, filter list subscriptions, custom rule syntax, per-site allowlisting, troubleshooting, and CLI automation."
+        path="/docs"
+      />
       <PageHero
         kicker="Documentation"
         title={

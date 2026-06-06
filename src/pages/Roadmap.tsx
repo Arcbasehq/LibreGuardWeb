@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 
 const columns: {
@@ -37,6 +38,11 @@ const columns: {
 export default function Roadmap() {
   return (
     <>
+      <SEO
+        title="Roadmap"
+        description="LibreGuard development roadmap: shipped, in progress, and exploring. Encrypted sync, Safari support, rule profiler, local AI heuristics, and more."
+        path="/roadmap"
+      />
       <PageHero
         kicker="Roadmap"
         title={

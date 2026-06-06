@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 import Button from "../components/Button";
 
 export default function NotFound() {
   return (
+    <>
+      <SEO
+        title="Page not found"
+        description="The page you're looking for doesn't exist — it got blocked, moved, or never existed."
+        path="/404"
+      />
     <section className="mx-auto flex min-h-[70vh] max-w-2xl flex-col items-center justify-center px-6 py-24 text-center sm:px-8">
       <p className="kicker">Error 404</p>
       <h1 className="display mt-5 text-[4rem] leading-none text-ink sm:text-[6rem]">
@@ -21,5 +28,6 @@ export default function NotFound() {
         </Button>
       </div>
     </section>
+    </>
   );
 }

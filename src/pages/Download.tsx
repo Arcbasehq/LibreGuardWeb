@@ -8,6 +8,7 @@ import {
   faBrave,
 } from "@fortawesome/free-brands-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 import Button from "../components/Button";
 
@@ -63,6 +64,11 @@ const builds: {
 export default function Download() {
   return (
     <>
+      <SEO
+        title="Download"
+        description="Download LibreGuard for Chrome, Brave, Edge, and Firefox. Free and open source ad blocker — no tiers, no upsell, no account, no telemetry."
+        path="/download"
+      />
       <PageHero
         kicker="Download"
         title={
@@ -70,7 +76,7 @@ export default function Download() {
             Pick your platform. <em>Done in a minute.</em>
           </>
         }
-        lede="Free and open source — no tiers, no upsell, no account. Live on Chrome and Brave today, with more browsers on the way."
+        lede="Free and open source — no tiers, no upsell, no account. Live on Chrome, Brave, and Edge today, with Firefox on the way."
       />
 
       <section className="mx-auto max-w-6xl px-6 py-20 sm:px-8">

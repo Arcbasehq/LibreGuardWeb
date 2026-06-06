@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faCheck } from "@fortawesome/free-solid-svg-icons";
+import SEO from "../components/SEO";
 import PageHero from "../components/PageHero";
 
 const never = [
@@ -20,6 +21,11 @@ const always = [
 export default function Privacy() {
   return (
     <>
+      <SEO
+        title="Privacy policy"
+        description="LibreGuard privacy policy: no account, no telemetry, no data collection. Your settings stay on your device. Full transparency, auditable open source."
+        path="/privacy"
+      />
       <PageHero
         kicker="Privacy"
         title={
