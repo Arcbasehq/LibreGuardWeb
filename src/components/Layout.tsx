@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -20,11 +21,23 @@ function ScrollToTop() {
 }
 
 export default function Layout() {
+  const { pathname } = useLocation();
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    ref.current?.classList.remove("page-enter");
+    void ref.current?.offsetWidth; /* force reflow */
+    ref.current?.classList.add("page-enter");
+  }, [pathname]);
+
   return (
     <div className="relative min-h-screen bg-canvas text-soft">
+      <Analytics />
       <ScrollToTop />
       <Header />
-      <Outlet />
+      <div ref={ref} className="page-enter">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

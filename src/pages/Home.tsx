@@ -60,7 +60,7 @@ const features: { icon: IconDefinition; title: string; desc: string }[] = [
   {
     icon: faLock,
     title: "Control access to unsafe content",
-    desc: "LibreGuard never phones home. There is no account, no telemetry, no profile of you anywhere.",
+    desc: "LibreGuard never phones home. There is no account required, no telemetry, no profile of you anywhere.",
   },
   {
     icon: faCode,
@@ -76,7 +76,7 @@ export default function Home() {
     <>
       <SEO
         title="Privacy-first ad blocker"
-        description="LibreGuard blocks ads, trackers, and malware at the network level across 330K+ domains. No telemetry, no account, no data ever leaves your device. Free and open source."
+        description="LibreGuard blocks ads, trackers, and malware at the network level across 330K+ domains. No telemetry, no account required, no data ever leaves your device. Free and open source."
         path="/"
         ogType="website"
       />
@@ -125,15 +125,17 @@ export default function Home() {
             </div>
 
             <div className="reveal d5 mt-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-mute">
-              {["Free forever", "No account", "No telemetry"].map((t) => (
-                <span key={t} className="inline-flex items-center gap-2">
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-mint/80"
-                  />
-                  {t}
-                </span>
-              ))}
+              {["Free forever", "No account required", "No telemetry"].map(
+                (t) => (
+                  <span key={t} className="inline-flex items-center gap-2">
+                    <FontAwesomeIcon
+                      icon={faCircleCheck}
+                      className="text-mint/80"
+                    />
+                    {t}
+                  </span>
+                ),
+              )}
             </div>
           </div>
 
@@ -247,7 +249,9 @@ export default function Home() {
 
           <div className="mt-10">
             <Button as={Link} to="/download" variant="secondary">
-              {released[platform] ? `Set up on ${platform}` : "See all browsers"}
+              {released[platform]
+                ? `Set up on ${platform}`
+                : "See all browsers"}
               <FontAwesomeIcon icon={faArrowRight} className="text-xs" />
             </Button>
           </div>

@@ -1,0 +1,24 @@
+[auth.captcha]
+enabled = true
+provider = "hcaptcha"
+secret = "env(SUPABASE_AUTH_CAPTCHA_SECRET)"
+
+# Time-based one-time password (TOTP) two-factor authentication
+[auth.mfa.totp]
+enroll_enabled = true
+verify_enabled = true
+
+# Google sign-in provider
+[auth.external.google]
+enabled = true
+client_id = "env(SUPABASE_AUTH_GOOGLE_CLIENT_ID)"
+secret = "env(SUPABASE_AUTH_GOOGLE_SECRET)"
+
+[functions]
+enabled = { enabled = true }
+
+[functions.create-checkout-session]
+verify_jwt = false
+
+[functions.payment-webhook]
+verify_jwt = false
